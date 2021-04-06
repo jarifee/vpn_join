@@ -1,28 +1,23 @@
-# vpn_join
-第三方节点接入，一键式启动，并接入去中心化Tenon VPN网络，提供服务和路由
+Support for CentOS 7
 
-当前仅支持： centos 7
+The one click Startup node is connected to the tenon VPN network of SAMA network, providing server nodes and bandwidth mining to obtain revenue.
 
-我们急需中国，韩国，日本，巴西，伊朗，菲律宾，台湾的节点
+Daily revenue of mining = total advertising revenue * (bandwidth consumed by nodes / bandwidth consumed by the whole platform) * (1 - platform revenue coefficient)
+PS: the profit coefficient of the platform is currently 5%, and the network is adjusted dynamically
 
-# 接入步骤
+Access steps of VPS or VDS
 
-1. 下载代码： 
-  
-   git clone https://github.com/actantion/vpn_join.git
-   
-   或者
-   
-   wget https://github.com/actantion/vpn_join/archive/1.1.3.zip
-   
+Step 1 download code
+yum install -y wget &amp;&amp; wget  https://github.com/tenondvpn/tenonvpn-join/archive/5.0.2.zip
 
-2. 执行： sh init_env.sh  
-   执行完成后会重启系统
-   
-3. （可选步骤）， 设置自己的私钥（是私钥不是账号地址），所有节点共享激励将发送到这个账户地址
-   sh set_private_key.sh 私钥
-   
-4. 执行： sh start_node.sh
+Step 2 initializes the environment, restarts the system after execution, and the program starts automatically
+yum install -y unzip &amp;&amp; unzip 5.0.2.zip &amp;&amp; mv tenonvpn-join-5.0.2 tnet &amp;&amp; cd tnet &amp;&amp; sh init_ env.sh
+Wait for the installation to complete and restart the machine
+
+Step 3 get mining private key and query website
+sh get_ private_ key.sh
+sh get_ mining_ url.sh
+Open the website, you can query the daily income of this node, and transfer money.
 
     
     
